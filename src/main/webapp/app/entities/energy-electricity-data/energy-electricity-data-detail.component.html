@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="energyElectricityData">
+            <h2><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.detail.title">Energy Electricity Data</span> {{energyElectricityData.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.voltage">Voltage</span></dt>
+                <dd>
+                    <div *ngIf="energyElectricityData.voltageId">
+                        <a [routerLink]="['/energy-voltage-data', energyElectricityData.voltageId, 'view']">{{energyElectricityData.voltageId}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.tariff">Tariff</span></dt>
+                <dd>
+                    <div *ngIf="energyElectricityData.tariffId">
+                        <a [routerLink]="['/energy-tariff-data', energyElectricityData.tariffId, 'view']">{{energyElectricityData.tariffId}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.cycle">Cycle</span></dt>
+                <dd>
+                    <div *ngIf="energyElectricityData.cycleId">
+                        <a [routerLink]="['/energy-cycle-data', energyElectricityData.cycleId, 'view']">{{energyElectricityData.cycleId}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.timePeriod">Time Period</span></dt>
+                <dd>
+                    <div *ngIf="energyElectricityData.timePeriodId">
+                        <a [routerLink]="['/energy-time-period-data', energyElectricityData.timePeriodId, 'view']">{{energyElectricityData.timePeriodId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/energy-electricity-data', energyElectricityData.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+{
+    "jhipsterEnergySampleApplicationApp": {
+        "energyTimePeriodData": {
+            "home": {
+                "title": "Energy Time Period Data",
+                "createLabel": "Criar um(a) novo(a) Energy Time Period Data",
+                "createOrEditLabel": "Criar ou editar um(a) Energy Time Period Data"
+            },
+            "created": "A new Energy Time Period Data is created with identifier {{ param }}",
+            "updated": "A Energy Time Period Data is updated with identifier {{ param }}",
+            "deleted": "A Energy Time Period Data is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Energy Time Period Data {{ id }}?"
+            },
+            "detail": {
+                "title": "Energy Time Period Data"
+            },
+            "description": "Description"
+        }
+    }
+}

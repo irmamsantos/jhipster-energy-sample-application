@@ -1,0 +1,24 @@
+{
+    "jhipsterEnergySampleApplicationApp": {
+        "energyElectricityData": {
+            "home": {
+                "title": "Energy Electricity Data",
+                "createLabel": "Criar um(a) novo(a) Energy Electricity Data",
+                "createOrEditLabel": "Criar ou editar um(a) Energy Electricity Data"
+            },
+            "created": "A new Energy Electricity Data is created with identifier {{ param }}",
+            "updated": "A Energy Electricity Data is updated with identifier {{ param }}",
+            "deleted": "A Energy Electricity Data is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Energy Electricity Data {{ id }}?"
+            },
+            "detail": {
+                "title": "Energy Electricity Data"
+            },
+            "voltage": "Voltage",
+            "tariff": "Tariff",
+            "cycle": "Cycle",
+            "timePeriod": "Time Period"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "jhipsterEnergySampleApplicationApp": {
+        "energyTariffData": {
+            "home": {
+                "title": "Energy Tariff Data",
+                "createLabel": "Criar um(a) novo(a) Energy Tariff Data",
+                "createOrEditLabel": "Criar ou editar um(a) Energy Tariff Data"
+            },
+            "created": "A new Energy Tariff Data is created with identifier {{ param }}",
+            "updated": "A Energy Tariff Data is updated with identifier {{ param }}",
+            "deleted": "A Energy Tariff Data is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Energy Tariff Data {{ id }}?"
+            },
+            "detail": {
+                "title": "Energy Tariff Data"
+            },
+            "description": "Description"
+        }
+    }
+}

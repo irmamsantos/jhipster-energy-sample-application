@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-energy-vehicle-model-data-heading" jhiTranslate="jhipsterEnergySampleApplicationApp.energyVehicleModelData.home.createOrEditLabel">Create or edit a Energy Vehicle Model Data</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!energyVehicleModelData.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="energyVehicleModelData.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyVehicleModelData.description" for="field_description">Description</label>
+                    <input type="text" class="form-control" name="description" id="field_description"
+                        [(ngModel)]="energyVehicleModelData.description" required/>
+                    <div [hidden]="!(editForm.controls.description?.dirty && editForm.controls.description?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.description?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyVehicleModelData.energyVehicleBrandData" for="field_energyVehicleBrandData">Energy Vehicle Brand Data</label>
+                    <select class="form-control" id="field_energyVehicleBrandData" name="energyVehicleBrandData" [(ngModel)]="energyVehicleModelData.energyVehicleBrandDataId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="energyVehicleBrandDataOption.id" *ngFor="let energyVehicleBrandDataOption of energyvehiclebranddata; trackBy: trackEnergyVehicleBrandDataById">{{energyVehicleBrandDataOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyVehicleModelData.brand" for="field_brand">Brand</label>
+                    <select class="form-control" id="field_brand" name="brand" [(ngModel)]="energyVehicleModelData.brandId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="energyVehicleBrandDataOption.id" *ngFor="let energyVehicleBrandDataOption of brands; trackBy: trackEnergyVehicleBrandDataById">{{energyVehicleBrandDataOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

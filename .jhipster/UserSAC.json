@@ -1,0 +1,56 @@
+{
+    "name": "UserSAC",
+    "fields": [
+        {
+            "fieldName": "userSACId",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "userName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "userEmail",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "updateDate",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "needNGRequest",
+            "otherEntityName": "energyNeedNGRequest",
+            "otherEntityRelationshipName": "user"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "stateHistory",
+            "otherEntityName": "energyNRStateHistory",
+            "otherEntityRelationshipName": "user"
+        }
+    ],
+    "changelogDate": "20181212162110",
+    "entityTableName": "user_sac",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

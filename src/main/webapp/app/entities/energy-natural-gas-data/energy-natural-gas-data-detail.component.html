@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="energyNaturalGasData">
+            <h2><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNaturalGasData.detail.title">Energy Natural Gas Data</span> {{energyNaturalGasData.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNaturalGasData.pressure">Pressure</span></dt>
+                <dd>
+                    <span>{{energyNaturalGasData.pressure}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNaturalGasData.echelon">Echelon</span></dt>
+                <dd>
+                    <span>{{energyNaturalGasData.echelon}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNaturalGasData.pressureDescription">Pressure Description</span></dt>
+                <dd>
+                    <span>{{energyNaturalGasData.pressureDescription}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/energy-natural-gas-data', energyNaturalGasData.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

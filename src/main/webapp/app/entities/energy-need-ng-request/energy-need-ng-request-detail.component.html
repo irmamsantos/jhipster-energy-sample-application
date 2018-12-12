@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="energyNeedNGRequest">
+            <h2><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNeedNGRequest.detail.title">Energy Need NG Request</span> {{energyNeedNGRequest.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNeedNGRequest.energyType">Energy Type</span></dt>
+                <dd>
+                    <span>{{energyNeedNGRequest.energyType}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNeedNGRequest.updateDate">Update Date</span></dt>
+                <dd>
+                    <span>{{energyNeedNGRequest.updateDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNeedNGRequest.user">User</span></dt>
+                <dd>
+                    <div *ngIf="energyNeedNGRequest.userId">
+                        <a [routerLink]="['/user-sac', energyNeedNGRequest.userId, 'view']">{{energyNeedNGRequest.userId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/energy-need-ng-request', energyNeedNGRequest.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+{
+    "jhipsterEnergySampleApplicationApp": {
+        "energyNeedNGRequest": {
+            "home": {
+                "title": "Energy Need NG Requests",
+                "createLabel": "Criar um(a) novo(a) Energy Need NG Request",
+                "createOrEditLabel": "Criar ou editar um(a) Energy Need NG Request"
+            },
+            "created": "A new Energy Need NG Request is created with identifier {{ param }}",
+            "updated": "A Energy Need NG Request is updated with identifier {{ param }}",
+            "deleted": "A Energy Need NG Request is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Energy Need NG Request {{ id }}?"
+            },
+            "detail": {
+                "title": "Energy Need NG Request"
+            },
+            "energyType": "Energy Type",
+            "updateDate": "Update Date",
+            "user": "User"
+        }
+    }
+}
