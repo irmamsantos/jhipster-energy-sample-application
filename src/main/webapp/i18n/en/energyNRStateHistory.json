@@ -1,0 +1,26 @@
+{
+    "jhipsterEnergySampleApplicationApp": {
+        "energyNRStateHistory": {
+            "home": {
+                "title": "Energy NR State Histories",
+                "createLabel": "Create a new Energy NR State History",
+                "createOrEditLabel": "Create or edit a Energy NR State History"
+            },
+            "created": "A new Energy NR State History is created with identifier {{ param }}",
+            "updated": "A Energy NR State History is updated with identifier {{ param }}",
+            "deleted": "A Energy NR State History is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Energy NR State History {{ id }}?"
+            },
+            "detail": {
+                "title": "Energy NR State History"
+            },
+            "energyType": "Energy Type",
+            "justification": "Justification",
+            "updateDate": "Update Date",
+            "stateValue": "State Value",
+            "needNGRequest": "Need NG Request",
+            "user": "User"
+        }
+    }
+}

@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-energy-electricity-data-heading" jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.home.createOrEditLabel">Create or edit a Energy Electricity Data</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!energyElectricityData.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="energyElectricityData.id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.voltage" for="field_voltage">Voltage</label>
+                    <select class="form-control" id="field_voltage" name="voltage" [(ngModel)]="energyElectricityData.voltageId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="energyVoltageDataOption.id" *ngFor="let energyVoltageDataOption of energyvoltagedata; trackBy: trackEnergyVoltageDataById">{{energyVoltageDataOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.tariff" for="field_tariff">Tariff</label>
+                    <select class="form-control" id="field_tariff" name="tariff" [(ngModel)]="energyElectricityData.tariffId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="energyTariffDataOption.id" *ngFor="let energyTariffDataOption of energytariffdata; trackBy: trackEnergyTariffDataById">{{energyTariffDataOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.cycle" for="field_cycle">Cycle</label>
+                    <select class="form-control" id="field_cycle" name="cycle" [(ngModel)]="energyElectricityData.cycleId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="energyCycleDataOption.id" *ngFor="let energyCycleDataOption of energycycledata; trackBy: trackEnergyCycleDataById">{{energyCycleDataOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.timePeriod" for="field_timePeriod">Time Period</label>
+                    <select class="form-control" id="field_timePeriod" name="timePeriod" [(ngModel)]="energyElectricityData.timePeriodId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="energyTimePeriodDataOption.id" *ngFor="let energyTimePeriodDataOption of energytimeperioddata; trackBy: trackEnergyTimePeriodDataById">{{energyTimePeriodDataOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

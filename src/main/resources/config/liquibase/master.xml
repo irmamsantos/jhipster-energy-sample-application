@@ -5,6 +5,23 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165655_added_entity_EnergyContractedPowerRatingData.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165656_added_entity_EnergyCycleData.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165657_added_entity_EnergyVoltageData.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165658_added_entity_EnergyTariffData.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165659_added_entity_EnergyTimePeriodData.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165700_added_entity_EnergyElectricityData.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165701_added_entity_EnergyFuelData.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165702_added_entity_EnergyNaturalGasData.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165703_added_entity_EnergyVehicleBrandData.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165704_added_entity_EnergyVehicleModelData.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165705_added_entity_EnergyNRStateHistory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165706_added_entity_UserSAC.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165707_added_entity_EnergyNeedNGRequest.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20181212165700_added_entity_constraints_EnergyElectricityData.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165704_added_entity_constraints_EnergyVehicleModelData.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165705_added_entity_constraints_EnergyNRStateHistory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20181212165707_added_entity_constraints_EnergyNeedNGRequest.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

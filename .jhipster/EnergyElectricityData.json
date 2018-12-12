@@ -1,0 +1,39 @@
+{
+    "name": "EnergyElectricityData",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "voltage",
+            "otherEntityName": "energyVoltageData",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "tariff",
+            "otherEntityName": "energyTariffData",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "cycle",
+            "otherEntityName": "energyCycleData",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "timePeriod",
+            "otherEntityName": "energyTimePeriodData",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181212165700",
+    "entityTableName": "energy_electricity_data",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

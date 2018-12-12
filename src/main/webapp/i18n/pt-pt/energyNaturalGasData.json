@@ -1,0 +1,23 @@
+{
+    "jhipsterEnergySampleApplicationApp": {
+        "energyNaturalGasData": {
+            "home": {
+                "title": "Energy Natural Gas Data",
+                "createLabel": "Criar um(a) novo(a) Energy Natural Gas Data",
+                "createOrEditLabel": "Criar ou editar um(a) Energy Natural Gas Data"
+            },
+            "created": "A new Energy Natural Gas Data is created with identifier {{ param }}",
+            "updated": "A Energy Natural Gas Data is updated with identifier {{ param }}",
+            "deleted": "A Energy Natural Gas Data is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Energy Natural Gas Data {{ id }}?"
+            },
+            "detail": {
+                "title": "Energy Natural Gas Data"
+            },
+            "pressure": "Pressure",
+            "echelon": "Echelon",
+            "pressureDescription": "Pressure Description"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "jhipsterEnergySampleApplicationApp": {
+        "energyContractedPowerRatingData": {
+            "home": {
+                "title": "Energy Contracted Power Rating Data",
+                "createLabel": "Criar um(a) novo(a) Energy Contracted Power Rating Data",
+                "createOrEditLabel": "Criar ou editar um(a) Energy Contracted Power Rating Data"
+            },
+            "created": "A new Energy Contracted Power Rating Data is created with identifier {{ param }}",
+            "updated": "A Energy Contracted Power Rating Data is updated with identifier {{ param }}",
+            "deleted": "A Energy Contracted Power Rating Data is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Energy Contracted Power Rating Data {{ id }}?"
+            },
+            "detail": {
+                "title": "Energy Contracted Power Rating Data"
+            },
+            "description": "Description"
+        }
+    }
+}

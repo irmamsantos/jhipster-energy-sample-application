@@ -1,0 +1,66 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNaturalGasData.home.title">Energy Natural Gas Data</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-energy-natural-gas-data" [routerLink]="['/energy-natural-gas-data/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="jhipsterEnergySampleApplicationApp.energyNaturalGasData.home.createLabel">
+            Create new Energy Natural Gas Data
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="energyNaturalGasData">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="pressure"><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNaturalGasData.pressure">Pressure</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="echelon"><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNaturalGasData.echelon">Echelon</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="pressureDescription"><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNaturalGasData.pressureDescription">Pressure Description</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let energyNaturalGasData of energyNaturalGasData ;trackBy: trackId">
+                <td><a [routerLink]="['/energy-natural-gas-data', energyNaturalGasData.id, 'view' ]">{{energyNaturalGasData.id}}</a></td>
+                <td>{{energyNaturalGasData.pressure}}</td>
+                <td>{{energyNaturalGasData.echelon}}</td>
+                <td>{{energyNaturalGasData.pressureDescription}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/energy-natural-gas-data', energyNaturalGasData.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/energy-natural-gas-data', energyNaturalGasData.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'energy-natural-gas-data/'+ energyNaturalGasData.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="energyNaturalGasData && energyNaturalGasData.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="queryCount" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true" (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>

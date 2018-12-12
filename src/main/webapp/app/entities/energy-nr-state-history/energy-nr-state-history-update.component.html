@@ -1,0 +1,82 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-energy-nr-state-history-heading" jhiTranslate="jhipsterEnergySampleApplicationApp.energyNRStateHistory.home.createOrEditLabel">Create or edit a Energy NR State History</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!energyNRStateHistory.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="energyNRStateHistory.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyNRStateHistory.energyType" for="field_energyType">Energy Type</label>
+                    <input type="text" class="form-control" name="energyType" id="field_energyType"
+                        [(ngModel)]="energyNRStateHistory.energyType" required/>
+                    <div [hidden]="!(editForm.controls.energyType?.dirty && editForm.controls.energyType?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.energyType?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyNRStateHistory.justification" for="field_justification">Justification</label>
+                    <input type="text" class="form-control" name="justification" id="field_justification"
+                        [(ngModel)]="energyNRStateHistory.justification" required/>
+                    <div [hidden]="!(editForm.controls.justification?.dirty && editForm.controls.justification?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.justification?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyNRStateHistory.updateDate" for="field_updateDate">Update Date</label>
+                    <div class="d-flex">
+                        <input id="field_updateDate" type="datetime-local" class="form-control" name="updateDate" [(ngModel)]="updateDate"
+                        required/>
+                    </div>
+                    <div [hidden]="!(editForm.controls.updateDate?.dirty && editForm.controls.updateDate?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.updateDate?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.updateDate?.errors?.ZonedDateTimelocal" jhiTranslate="entity.validation.ZonedDateTimelocal">
+                            This field should be a date and time.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyNRStateHistory.stateValue" for="field_stateValue">State Value</label>
+                    <input type="text" class="form-control" name="stateValue" id="field_stateValue"
+                        [(ngModel)]="energyNRStateHistory.stateValue" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyNRStateHistory.needNGRequest" for="field_needNGRequest">Need NG Request</label>
+                    <select class="form-control" id="field_needNGRequest" name="needNGRequest" [(ngModel)]="energyNRStateHistory.needNGRequestId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="energyNeedNGRequestOption.id" *ngFor="let energyNeedNGRequestOption of energyneedngrequests; trackBy: trackEnergyNeedNGRequestById">{{energyNeedNGRequestOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyNRStateHistory.user" for="field_user">User</label>
+                    <select class="form-control" id="field_user" name="user" [(ngModel)]="energyNRStateHistory.userId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="userSACOption.id" *ngFor="let userSACOption of usersacs; trackBy: trackUserSACById">{{userSACOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

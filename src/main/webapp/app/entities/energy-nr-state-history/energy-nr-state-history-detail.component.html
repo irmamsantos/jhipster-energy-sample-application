@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="energyNRStateHistory">
+            <h2><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNRStateHistory.detail.title">Energy NR State History</span> {{energyNRStateHistory.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNRStateHistory.energyType">Energy Type</span></dt>
+                <dd>
+                    <span>{{energyNRStateHistory.energyType}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNRStateHistory.justification">Justification</span></dt>
+                <dd>
+                    <span>{{energyNRStateHistory.justification}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNRStateHistory.updateDate">Update Date</span></dt>
+                <dd>
+                    <span>{{energyNRStateHistory.updateDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNRStateHistory.stateValue">State Value</span></dt>
+                <dd>
+                    <span>{{energyNRStateHistory.stateValue}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNRStateHistory.needNGRequest">Need NG Request</span></dt>
+                <dd>
+                    <div *ngIf="energyNRStateHistory.needNGRequestId">
+                        <a [routerLink]="['/energy-need-ng-request', energyNRStateHistory.needNGRequestId, 'view']">{{energyNRStateHistory.needNGRequestId}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyNRStateHistory.user">User</span></dt>
+                <dd>
+                    <div *ngIf="energyNRStateHistory.userId">
+                        <a [routerLink]="['/user-sac', energyNRStateHistory.userId, 'view']">{{energyNRStateHistory.userId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/energy-nr-state-history', energyNRStateHistory.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="userSAC">
+            <h2><span jhiTranslate="jhipsterEnergySampleApplicationApp.userSAC.detail.title">User SAC</span> {{userSAC.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.userSAC.userSACId">User SAC Id</span></dt>
+                <dd>
+                    <span>{{userSAC.userSACId}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.userSAC.userName">User Name</span></dt>
+                <dd>
+                    <span>{{userSAC.userName}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.userSAC.userEmail">User Email</span></dt>
+                <dd>
+                    <span>{{userSAC.userEmail}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.userSAC.updateDate">Update Date</span></dt>
+                <dd>
+                    <span>{{userSAC.updateDate}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/user-sac', userSAC.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
