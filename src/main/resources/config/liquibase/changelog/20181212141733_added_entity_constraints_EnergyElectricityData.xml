@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity EnergyElectricityData.
+    -->
+    <changeSet id="20181212141733-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="energy_voltage_data_id"
+                                 baseTableName="energy_electricity_data"
+                                 constraintName="fk_energy_electricity_data_energy_voltage_data_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="energy_voltage_data"/>
+
+        <addForeignKeyConstraint baseColumnNames="energy_tariff_data_id"
+                                 baseTableName="energy_electricity_data"
+                                 constraintName="fk_energy_electricity_data_energy_tariff_data_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="energy_tariff_data"/>
+
+        <addForeignKeyConstraint baseColumnNames="energy_cycle_data_id"
+                                 baseTableName="energy_electricity_data"
+                                 constraintName="fk_energy_electricity_data_energy_cycle_data_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="energy_cycle_data"/>
+
+        <addForeignKeyConstraint baseColumnNames="energy_time_period_data_id"
+                                 baseTableName="energy_electricity_data"
+                                 constraintName="fk_energy_electricity_data_energy_time_period_data_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="energy_time_period_data"/>
+
+    </changeSet>
+</databaseChangeLog>

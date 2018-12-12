@@ -1,0 +1,22 @@
+{
+    "jhipsterEnergySampleApplicationApp": {
+        "energyVoltageData": {
+            "home": {
+                "title": "Energy Voltage Data",
+                "createLabel": "Criar um(a) novo(a) Energy Voltage Data",
+                "createOrEditLabel": "Criar ou editar um(a) Energy Voltage Data"
+            },
+            "created": "A new Energy Voltage Data is created with identifier {{ param }}",
+            "updated": "A Energy Voltage Data is updated with identifier {{ param }}",
+            "deleted": "A Energy Voltage Data is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Energy Voltage Data {{ id }}?"
+            },
+            "detail": {
+                "title": "Energy Voltage Data"
+            },
+            "description": "Description",
+            "energyElectricityData": "Energy Electricity Data"
+        }
+    }
+}

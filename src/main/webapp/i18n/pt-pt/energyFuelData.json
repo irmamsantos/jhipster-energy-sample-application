@@ -1,0 +1,22 @@
+{
+    "jhipsterEnergySampleApplicationApp": {
+        "energyFuelData": {
+            "home": {
+                "title": "Energy Fuel Data",
+                "createLabel": "Criar um(a) novo(a) Energy Fuel Data",
+                "createOrEditLabel": "Criar ou editar um(a) Energy Fuel Data"
+            },
+            "created": "A new Energy Fuel Data is created with identifier {{ param }}",
+            "updated": "A Energy Fuel Data is updated with identifier {{ param }}",
+            "deleted": "A Energy Fuel Data is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Energy Fuel Data {{ id }}?"
+            },
+            "detail": {
+                "title": "Energy Fuel Data"
+            },
+            "type": "Type",
+            "product": "Product"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="energyVehicleBrandData">
+            <h2><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyVehicleBrandData.detail.title">Energy Vehicle Brand Data</span> {{energyVehicleBrandData.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyVehicleBrandData.description">Description</span></dt>
+                <dd>
+                    <span>{{energyVehicleBrandData.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyVehicleBrandData.energyVehicleModelData">Energy Vehicle Model Data</span></dt>
+                <dd>
+                    <div *ngIf="energyVehicleBrandData.energyVehicleModelData">
+                        <a [routerLink]="['/energy-vehicle-model-data', energyVehicleBrandData.energyVehicleModelData?.id, 'view']">{{energyVehicleBrandData.energyVehicleModelData?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/energy-vehicle-brand-data', energyVehicleBrandData.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

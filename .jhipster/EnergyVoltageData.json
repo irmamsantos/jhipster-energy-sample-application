@@ -1,0 +1,29 @@
+{
+    "name": "EnergyVoltageData",
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "energyElectricityData",
+            "otherEntityName": "energyElectricityData",
+            "otherEntityRelationshipName": "energyVoltageData"
+        }
+    ],
+    "changelogDate": "20181212141730",
+    "entityTableName": "energy_voltage_data",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

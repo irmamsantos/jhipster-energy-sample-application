@@ -1,0 +1,22 @@
+{
+    "jhipsterEnergySampleApplicationApp": {
+        "energyCycleData": {
+            "home": {
+                "title": "Energy Cycle Data",
+                "createLabel": "Criar um(a) novo(a) Energy Cycle Data",
+                "createOrEditLabel": "Criar ou editar um(a) Energy Cycle Data"
+            },
+            "created": "A new Energy Cycle Data is created with identifier {{ param }}",
+            "updated": "A Energy Cycle Data is updated with identifier {{ param }}",
+            "deleted": "A Energy Cycle Data is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Energy Cycle Data {{ id }}?"
+            },
+            "detail": {
+                "title": "Energy Cycle Data"
+            },
+            "description": "Description",
+            "energyElectricityData": "Energy Electricity Data"
+        }
+    }
+}

@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-energy-electricity-data-heading" jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.home.createOrEditLabel">Create or edit a Energy Electricity Data</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!energyElectricityData.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="energyElectricityData.id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.energyVoltageData" for="field_energyVoltageData">Energy Voltage Data</label>
+                    <select class="form-control" id="field_energyVoltageData" name="energyVoltageData" [(ngModel)]="energyElectricityData.energyVoltageData" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="energyVoltageDataOption.id === energyElectricityData.energyVoltageData?.id ? energyElectricityData.energyVoltageData : energyVoltageDataOption" *ngFor="let energyVoltageDataOption of energyvoltagedata; trackBy: trackEnergyVoltageDataById">{{energyVoltageDataOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.energyTariffData" for="field_energyTariffData">Energy Tariff Data</label>
+                    <select class="form-control" id="field_energyTariffData" name="energyTariffData" [(ngModel)]="energyElectricityData.energyTariffData" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="energyTariffDataOption.id === energyElectricityData.energyTariffData?.id ? energyElectricityData.energyTariffData : energyTariffDataOption" *ngFor="let energyTariffDataOption of energytariffdata; trackBy: trackEnergyTariffDataById">{{energyTariffDataOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.energyCycleData" for="field_energyCycleData">Energy Cycle Data</label>
+                    <select class="form-control" id="field_energyCycleData" name="energyCycleData" [(ngModel)]="energyElectricityData.energyCycleData" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="energyCycleDataOption.id === energyElectricityData.energyCycleData?.id ? energyElectricityData.energyCycleData : energyCycleDataOption" *ngFor="let energyCycleDataOption of energycycledata; trackBy: trackEnergyCycleDataById">{{energyCycleDataOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.energyTimePeriodData" for="field_energyTimePeriodData">Energy Time Period Data</label>
+                    <select class="form-control" id="field_energyTimePeriodData" name="energyTimePeriodData" [(ngModel)]="energyElectricityData.energyTimePeriodData" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="energyTimePeriodDataOption.id === energyElectricityData.energyTimePeriodData?.id ? energyElectricityData.energyTimePeriodData : energyTimePeriodDataOption" *ngFor="let energyTimePeriodDataOption of energytimeperioddata; trackBy: trackEnergyTimePeriodDataById">{{energyTimePeriodDataOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

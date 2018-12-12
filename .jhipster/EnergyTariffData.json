@@ -1,0 +1,29 @@
+{
+    "name": "EnergyTariffData",
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "energyElectricityData",
+            "otherEntityName": "energyElectricityData",
+            "otherEntityRelationshipName": "energyTariffData"
+        }
+    ],
+    "changelogDate": "20181212141731",
+    "entityTableName": "energy_tariff_data",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,76 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.home.title">Energy Electricity Data</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-energy-electricity-data" [routerLink]="['/energy-electricity-data/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.home.createLabel">
+            Create new Energy Electricity Data
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="energyElectricityData">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.energyVoltageData">Energy Voltage Data</span></th>
+            <th><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.energyTariffData">Energy Tariff Data</span></th>
+            <th><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.energyCycleData">Energy Cycle Data</span></th>
+            <th><span jhiTranslate="jhipsterEnergySampleApplicationApp.energyElectricityData.energyTimePeriodData">Energy Time Period Data</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let energyElectricityData of energyElectricityData ;trackBy: trackId">
+                <td><a [routerLink]="['/energy-electricity-data', energyElectricityData.id, 'view' ]">{{energyElectricityData.id}}</a></td>
+                <td>
+                    <div *ngIf="energyElectricityData.energyVoltageData">
+                        <a [routerLink]="['../energy-voltage-data', energyElectricityData.energyVoltageData?.id, 'view' ]" >{{energyElectricityData.energyVoltageData?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="energyElectricityData.energyTariffData">
+                        <a [routerLink]="['../energy-tariff-data', energyElectricityData.energyTariffData?.id, 'view' ]" >{{energyElectricityData.energyTariffData?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="energyElectricityData.energyCycleData">
+                        <a [routerLink]="['../energy-cycle-data', energyElectricityData.energyCycleData?.id, 'view' ]" >{{energyElectricityData.energyCycleData?.id}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="energyElectricityData.energyTimePeriodData">
+                        <a [routerLink]="['../energy-time-period-data', energyElectricityData.energyTimePeriodData?.id, 'view' ]" >{{energyElectricityData.energyTimePeriodData?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/energy-electricity-data', energyElectricityData.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/energy-electricity-data', energyElectricityData.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'energy-electricity-data/'+ energyElectricityData.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

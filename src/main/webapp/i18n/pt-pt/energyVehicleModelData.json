@@ -1,0 +1,23 @@
+{
+    "jhipsterEnergySampleApplicationApp": {
+        "energyVehicleModelData": {
+            "home": {
+                "title": "Energy Vehicle Model Data",
+                "createLabel": "Criar um(a) novo(a) Energy Vehicle Model Data",
+                "createOrEditLabel": "Criar ou editar um(a) Energy Vehicle Model Data"
+            },
+            "created": "A new Energy Vehicle Model Data is created with identifier {{ param }}",
+            "updated": "A Energy Vehicle Model Data is updated with identifier {{ param }}",
+            "deleted": "A Energy Vehicle Model Data is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Energy Vehicle Model Data {{ id }}?"
+            },
+            "detail": {
+                "title": "Energy Vehicle Model Data"
+            },
+            "description": "Description",
+            "energyVehicleBrandData": "Energy Vehicle Brand Data",
+            "energyVehicleBrandData": "Energy Vehicle Brand Data"
+        }
+    }
+}

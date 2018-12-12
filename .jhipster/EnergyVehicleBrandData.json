@@ -1,0 +1,35 @@
+{
+    "name": "EnergyVehicleBrandData",
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "model",
+            "otherEntityName": "energyVehicleModelData",
+            "otherEntityRelationshipName": "energyVehicleBrandData"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "energyVehicleModelData",
+            "otherEntityName": "energyVehicleModelData",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181212141736",
+    "entityTableName": "energy_vehicle_brand_data",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

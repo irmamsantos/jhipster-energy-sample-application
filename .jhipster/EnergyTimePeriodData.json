@@ -1,0 +1,29 @@
+{
+    "name": "EnergyTimePeriodData",
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "energyElectricityData",
+            "otherEntityName": "energyElectricityData",
+            "otherEntityRelationshipName": "energyTimePeriodData"
+        }
+    ],
+    "changelogDate": "20181212141732",
+    "entityTableName": "energy_time_period_data",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
