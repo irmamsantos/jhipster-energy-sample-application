@@ -1,4 +1,4 @@
-# jhipsterEnergySampleApplication
+# blog
 This application was generated using JHipster 5.7.0, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v5.7.0](https://www.jhipster.tech/documentation-archive/v5.7.0).
 
 ## Development
@@ -10,24 +10,11 @@ To start your application in the dev profile, simply run:
 
 For further instructions on how to develop with JHipster, have a look at [Using JHipster in development][].
 
-### Using angular-cli
-
-You can also use [Angular CLI][] to generate some custom client code.
-
-For example, the following command:
-
-    ng generate component my-component
-
-will generate few files:
-
-    create src/main/webapp/app/my-component/my-component.component.html
-    create src/main/webapp/app/my-component/my-component.component.ts
-    update src/main/webapp/app/app.module.ts
 
 
 ## Building for production
 
-To optimize the jhipsterEnergySampleApplication application for production, run:
+To optimize the blog application for production, run:
 
     ./mvnw -Pprod clean package
 
@@ -43,11 +30,6 @@ Refer to [Using JHipster in production][] for more details.
 To launch your application's tests, run:
 
     ./mvnw clean test
-### Other tests
-
-Performance tests are run by [Gatling][] and written in Scala. They're located in [src/test/gatling](src/test/gatling).
-
-To use those tests, you must install Gatling from [https://gatling.io/](https://gatling.io/).
 
 For more information, refer to the [Running tests page][].
 
@@ -104,4 +86,4 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [Code quality page]: https://www.jhipster.tech/documentation-archive/v5.7.0/code-quality/
 [Setting up Continuous Integration]: https://www.jhipster.tech/documentation-archive/v5.7.0/setting-up-ci/
 
-[Gatling]: http://gatling.io/
+
