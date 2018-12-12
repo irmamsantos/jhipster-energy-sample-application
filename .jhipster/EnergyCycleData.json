@@ -1,0 +1,29 @@
+{
+    "name": "EnergyCycleData",
+    "fields": [
+        {
+            "fieldName": "description",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "energyElectricityData",
+            "otherEntityName": "energyElectricityData",
+            "otherEntityRelationshipName": "energyCycleData"
+        }
+    ],
+    "changelogDate": "20181212142831",
+    "entityTableName": "energy_cycle_data",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -8,6 +8,16 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entidades",
+                "energyContractedPowerRatingData": "Energy Contracted Power Rating Data",
+                "energyCycleData": "Energy Cycle Data",
+                "energyVoltageData": "Energy Voltage Data",
+                "energyTariffData": "Energy Tariff Data",
+                "energyTimePeriodData": "Energy Time Period Data",
+                "energyElectricityData": "Energy Electricity Data",
+                "energyFuelData": "Energy Fuel Data",
+                "energyNaturalGasData": "Energy Natural Gas Data",
+                "energyVehicleBrandData": "Energy Vehicle Brand Data",
+                "energyVehicleModelData": "Energy Vehicle Model Data",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
