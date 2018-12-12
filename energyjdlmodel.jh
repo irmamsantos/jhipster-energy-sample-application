@@ -1,0 +1,88 @@
+entity EnergyContractedPowerRatingData(EnergyContractedPowerRatingData) {
+	description String required
+}
+
+entity EnergyCycleData(EnergyCycleData) {
+	description String required
+}
+
+entity EnergyVoltageData(EnergyCycleData) {
+	description String required
+}
+
+entity EnergyTariffData(EnergyTariffData) {
+	description String required
+}
+
+entity EnergyTimePeriodData(EnergyTimePeriodData) {
+	description String required
+}
+
+entity EnergyElectricityData(EnergyElectricityData) {}
+
+entity EnergyFuelData(EnergyFuelData) {
+	type String required,
+    product String required
+}
+
+entity EnergyNaturalGasData(EnergyNaturalGasData) {
+	pressure String required,
+    echelon String required,
+    pressureDescription String required
+}
+
+entity EnergyVehicleBrandData(EnergyVehicleBrandData) {
+	description String required
+}
+
+entity EnergyVehicleModelData(EnergyVehicleModelData) {
+	description String required
+}
+
+entity EnergyTimePeriodData(EnergyTimePeriodData) {
+	description String required
+}
+
+//EnergyNeedRequestStateHistory
+entity EnergyNRStateHistory(EnergyNRStateHistory) {
+	energyType String required,
+    justification String required,
+    updateDate Instant required,
+    stateValue String
+}
+
+entity UserSAC(UserSAC) {
+	userSACId Integer required,
+    userName String required,
+    userEmail String required,
+    updateDate Instant required
+}
+
+entity EnergyNeedNGRequest(EnergyNeedNGRequest) {
+	energyType String required,
+    updateDate Instant required
+}
+
+relationship OneToOne {
+	EnergyVehicleModelData{brand} to EnergyVehicleBrandData
+}
+
+relationship OneToMany {
+	EnergyVehicleBrandData{model(description)} to EnergyVehicleModelData,
+    UserSAC{needNGRequest} to EnergyNeedNGRequest{user},
+    UserSAC{stateHistory} to EnergyNRStateHistory{user}
+}
+
+relationship ManyToOne {
+	EnergyElectricityData{voltage} to EnergyVoltageData,
+    EnergyElectricityData{tariff} to EnergyTariffData,
+    EnergyElectricityData{cycle} to EnergyCycleData,
+    EnergyElectricityData{timePeriod} to EnergyTimePeriodData
+}
+
+dto * with mapstruct
+service * with serviceImpl
+paginate * with pagination
+
+
+

@@ -1,0 +1,36 @@
+{
+    "name": "EnergyNeedNGRequest",
+    "fields": [
+        {
+            "fieldName": "energyType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "updateDate",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "user",
+            "otherEntityName": "userSAC",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181212162111",
+    "entityTableName": "energy_need_ng_request",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
