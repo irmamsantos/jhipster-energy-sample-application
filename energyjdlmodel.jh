@@ -1,0 +1,64 @@
+entity EnergyContractedPowerRatingData {
+	description String required
+}
+
+entity EnergyCycleData {
+	description String required
+}
+
+entity EnergyVoltageData {
+	description String required
+}
+
+entity EnergyTariffData {
+	description String required
+}
+
+entity EnergyTimePeriodData {
+	description String required
+}
+
+entity EnergyElectricityData {}
+
+entity EnergyFuelData {
+	type String required,
+    product String required
+}
+
+entity EnergyNaturalGasData {
+	pressure String required,
+    echelon String required,
+    pressureDescription String required
+}
+
+entity EnergyVehicleBrandData {
+	description String required
+}
+
+entity EnergyVehicleModelData {
+	description String required
+}
+
+entity EnergyTimePeriodData {
+	description String required
+}
+
+relationship OneToMany {
+	EnergyVehicleModelData to EnergyVehicleBrandData
+}
+
+relationship OneToMany {
+	EnergyVehicleBrandData{model(description)} to EnergyVehicleModelData
+}
+
+relationship ManyToOne {
+	EnergyElectricityData to EnergyVoltageData,
+    EnergyElectricityData to EnergyTariffData,
+    EnergyElectricityData to EnergyCycleData,
+    EnergyElectricityData to EnergyTimePeriodData
+}
+
+
+
+
+
