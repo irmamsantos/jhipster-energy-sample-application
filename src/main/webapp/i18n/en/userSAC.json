@@ -1,0 +1,26 @@
+{
+    "jhipsterEnergySampleApplicationApp": {
+        "userSAC": {
+            "home": {
+                "title": "User SACS",
+                "createLabel": "Create a new User SAC",
+                "createOrEditLabel": "Create or edit a User SAC"
+            },
+            "created": "A new User SAC is created with identifier {{ param }}",
+            "updated": "A User SAC is updated with identifier {{ param }}",
+            "deleted": "A User SAC is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete User SAC {{ id }}?"
+            },
+            "detail": {
+                "title": "User SAC"
+            },
+            "userSACId": "User SAC Id",
+            "userName": "User Name",
+            "userEmail": "User Email",
+            "updateDate": "Update Date",
+            "needNGRequest": "Need NG Request",
+            "stateHistory": "State History"
+        }
+    }
+}
